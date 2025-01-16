@@ -44,12 +44,15 @@ function App() {
         <p>2월 17일 발행</p>
       </div>
       <div className="list">
-        <h4>{글제목[2]}</h4>
+        <h4 onClick={()=>{ setModal(!modal) }}>{글제목[2]}</h4>
         <p>2월 17일 발행</p>
       </div>
+      {
+        modal == true? <Modal/> : null
+      }
    </div>
    
-  )
+  );
 }
 
 export default App;
